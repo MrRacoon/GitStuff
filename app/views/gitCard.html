@@ -1,0 +1,32 @@
+<!-- outer-container -->
+<div ng-hide="hide" class="row well">
+    <!-- 'short-mode' container -->
+    <div ng-class="{'col-xs-4': !isLong}">
+        <!-- 'long-mode' container-->
+        <div ng-class="{'col-xs-4': isLong}">
+            <!-- Avatar Image -->
+            <img ng-src="{{userInfo.avatar_url}}" class="img-responsive" alt="{{userInfo.user_name}}">
+        </div>
+        <!-- 'long-mode' container-->
+        <!-- Name and Login -->
+        <div ng-class="{'col-xs-4': isLong}">
+            <h1>
+                <!-- Name-->
+                <span class="name">{{userInfo.name}}</span>
+                <!-- Login -->
+                <span class="username">({{userInfo.login}})</span>
+            </h1>
+        </div>
+        <!-- 'long-mode' container-->
+        <div ng-class="{'col-xs-4': isLong}">
+            <!-- Location -->
+            {{userInfo.location}}
+            <!-- badges -->
+            <ul class="list-inline">
+                <li class="text-center">{{userInfo.followers}} <p>Followers</p></li>
+                <li class="text-center">{{userInfo.starred}} <p>Starred</p></li>
+                <li class="text-center">{{userInfo.following}} <p>Following</p></li>
+            </ul>
+        </div>
+    </div>
+</div>

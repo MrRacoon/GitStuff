@@ -1,8 +1,6 @@
 <div ng-show="loaded" class="row" id="follower-panel">
-  <div class="col-md-8">
     <h2>Followers</h2>
-      <div class="col-mid-4" ng-repeat="f in followers">
-        <a href="{{f.html_url}}">{{f.login}}</a>
-      </div>
-  </div>
+    <div ng-repeat="f in followers">
+        <git-card is-long="true" user-name="f.login" hide="false">
+    </div>
 </div>

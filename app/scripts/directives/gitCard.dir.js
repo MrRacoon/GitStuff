@@ -36,7 +36,10 @@ angular.module('gitStuffApp')
                 scope.userInfo = undefined;
 
                 // Function to set the userInfo data
-                function setUser (data) { scope.userInfo = data; }
+                function setUser (data) {
+                    scope.userInfo = data;
+                    console.log(data);
+                }
 
                 // Take a login, and get the user information if it isn't
                 // undefined, then set the User information to a variable on

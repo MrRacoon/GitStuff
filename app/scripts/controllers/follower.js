@@ -18,7 +18,7 @@
  */
 angular.module('gitStuffApp')
   .controller('FollowCtrl', function ($scope, gitService) {
-    $scope.username = "maxmarchuk";
+    $scope.username = "MrRacoon";
   gitService.getFollowers($scope.username).then(function(data){
       $scope.followers = data;
       console.log($scope.followers);
